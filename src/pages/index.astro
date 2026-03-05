@@ -272,6 +272,7 @@
     #tlCoverImg.mosaic {
       filter: blur(16px) brightness(0.4) saturate(0.15);
       transform: scale(1.09);
+      cursor: default;
     }
     .tl-cover-col { overflow: hidden; }
 
@@ -506,7 +507,7 @@
     </div>
     <div class="tl-body">
       <div class="tl-cover-col">
-        <img id="tlCoverImg" src="" alt="" onclick="document.getElementById('albumZoom').classList.add('open')" />
+        <img id="tlCoverImg" src="" alt="" onclick="if(!this.classList.contains('mosaic'))document.getElementById('albumZoom').classList.add('open')" />
       </div>
       <div class="tl-list">
         <div><span class="tn">01</span><span class="rv">1987</span></div>
